@@ -30,7 +30,7 @@ public class QuizDaoImpl implements IQuizDao {
 		jdbcTemplate.update(Queries.INSERTANSWERQUERY, answerArray);
 		Object[] questionArray = { question.getQuestionId(), question.getTopic(), question.getQuestion(),
 				question.getOptionOne(), question.getOptionTwo(), question.getOptionThree(), question.getOptionFour(),
-				question.getAnswer().getAnswerId() };
+				question.getAnswer().getAnswerId(),question.getAnswer().getAnswerValue() };
 
 		jdbcTemplate.update(Queries.INSERTQUESTIONQUERY, questionArray);
 

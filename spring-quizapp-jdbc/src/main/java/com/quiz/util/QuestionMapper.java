@@ -16,15 +16,15 @@ public class QuestionMapper implements RowMapper<Question> {
 	public Question mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Question question = new Question();
 		Answer answer = new Answer();
-		question.setQuestionId(rs.getInt(1));
-		question.setTopic(rs.getString(2));
-		question.setQuestion(rs.getString(3));
-		question.setOptionOne(rs.getString(4));
-		question.setOptionTwo(rs.getString(5));
-		question.setOptionThree(rs.getString(6));
-		question.setOptionFour(rs.getString(7));
-		answer.setAnswerId(rs.getInt(8));
-		answer.setAnswerValue(rs.getString(9));
+		question.setQuestionId(rs.getInt("questionId"));
+		question.setTopic(rs.getString("topic"));
+		question.setQuestion(rs.getString("question"));
+		question.setOptionOne(rs.getString("optionOne"));
+		question.setOptionTwo(rs.getString("optionTwo"));
+		question.setOptionThree(rs.getString("optionThree"));
+		question.setOptionFour(rs.getString("optionFour"));
+		answer.setAnswerId(rs.getInt("answerId"));
+		answer.setAnswerValue(rs.getString("answervalue"));
 		question.setAnswer(answer);
 
 		return question;
