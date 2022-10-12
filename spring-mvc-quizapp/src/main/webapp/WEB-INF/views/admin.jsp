@@ -8,6 +8,8 @@
 </head>
 <body>
 <a href="add-question-form">Add Question</a>
+<a href="update-doctor-form">Update Doctor</a>
+
 
 </body>
 </html>

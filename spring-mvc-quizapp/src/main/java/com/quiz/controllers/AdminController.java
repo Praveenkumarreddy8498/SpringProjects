@@ -16,5 +16,11 @@ public class AdminController {
 		return "addQuestionForm";
 		
 	}
+	@RequestMapping("update-doctor-form")
+	public String showEditForm(){
+		
+		return "editForm";
+		
+	}
 
 }

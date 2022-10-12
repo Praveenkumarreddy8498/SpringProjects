@@ -75,4 +75,22 @@ public class QuizController {
 
 	}
 
+	
+	 @RequestMapping("getQuestion")
+	public String getQestion(@RequestParam("questionId") Integer questionId,Model model) {
+		Question question=quizService.getQuestionById(questionId);
+		Answer answer=question.getAnswer();
+		model.addAttribute("questionObj", question);
+		model.addAttribute("answerObj", answer);
+		return "updateForm";
+		
+	}
+@RequestMapping("update-question")
+ public String updateDoctor(@RequestParam("questionId") Integer questionId,@RequestParam("answerValue") String answerValue,Model model) {
+	quizService.updateQuestion(questionId, answerValue);
+	
+	return "admin";
+	
+}
+
 }
